@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$nunito: 'Nunito Sans', sans-serif;
+$display: 'Playfair Display', serif;
+$sans-serif: Arial, Helvetica, sans-serif;
+$amarillo: rgb(255,230,180);
+$violeta: rgb(175, 165, 215);
+$violeta-medio: rgb(160, 145, 200);
+$violeta-oscuro: #968cc3;
+
+@mixin vgen() {
+
+    &:hover {
+        div {
+            @include caja($violeta-medio);
+            p {
+                color: $violeta!important;
+                &::before {
+                    background: url(../img/iconos-violeta/vgen.svg) 100% center no-repeat;
+                }
+            }
+        }
+    }
+    div {
+        height: 1rem;
+        @include caja($amarillo);
+        text-transform: uppercase;
+        padding: 10px;
+        overflow: hidden;
+    
+        p {
+            height: 1rem;
+            position: relative;
+            top: -20px;
+            font-weight: 700;
+            font-size: 1rem;
+    
+            &::before {
+                background: url(../img/iconos-amarillos/vgen.svg) 100% center no-repeat;
+                width: 20%;
+                height: 2rem;
+                position: relative;
+                top:10px;
+                display: inline-block;
+                content: " ";
+                margin-right: 10px;
+            }
+        }
+
+    }
+}
+
+@mixin caja($color) {
+    border: 2px solid $color;
+    background: $violeta-oscuro;
+    color: $color;
+}
+
+@mixin fondo() {
+    background: $violeta;
+}
+
+@mixin enlace-indice() {
+    width: 3vw;
+    height: 3vw;
+    background-color: $violeta;
+    border: 2px solid $amarillo;
+    border-radius: 50%;
+    padding: 5px;
+    margin: 1vh 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    @include fondo;
+
+    main {
+        width: 85vw;
+        height: 100vh;
+
+        h1 {
+            font-family: $display;
+            color: $amarillo;
+        }
+
+        p, h2, h3, h4 {
+            font-family: $nunito;
+            color: $amarillo;
+        }
+    }
+}

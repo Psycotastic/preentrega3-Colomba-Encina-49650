@@ -1,0 +1,81 @@
+/*Portafolio*/
+
+main#portafolio {
+    .portafolio {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 10% 10% 10% 10% 10% 23%;
+        grid-gap: 1%;
+        height: 100vh;
+
+        h1 {
+            grid-column: 1 / 2;
+            grid-row: 2;
+        }
+
+        .izquierda {
+            grid-column: 1 / 2;
+        }
+
+        .uno {
+            grid-row: 3;
+
+            &:hover ~ .derecha div:nth-child(1){
+                opacity: 1;
+                transition: 0.5s;
+            }
+        }
+
+        .dos {
+            grid-row: 4;
+            &:hover ~ .derecha div:nth-child(2){
+                opacity: 1;
+                transition: 0.5s;
+            }
+        }
+
+        .tres {
+            grid-row: 5;
+            &:hover ~ .derecha div:nth-child(3){
+                opacity: 1;
+                transition: 0.5s;
+            }
+        }
+
+        .derecha {
+            height: 100vh;
+            grid-column: 2;
+            overflow: hidden;
+            grid-row: 1;
+
+            > div {
+                width: 100%;
+                height: 100%;
+            }
+            
+            div:nth-child(1) {
+                background: url('../img/ilus-naorta.png')90% 0 no-repeat;
+                position: relative;
+                opacity: 0;
+                transition: 0.5s;
+            }
+            div:nth-child(2) {
+                background: url('../img/ilus-naorta.png')90% 0 no-repeat;
+                position: relative;
+                opacity: 0;
+                top: -100%;
+                transition: 0.5s;
+            }
+            
+            div:nth-child(3) {
+                background: url('../img/ilus-naorta.png')90% 0 no-repeat;
+                position: relative;
+                opacity: 0;
+                top: -200%;
+                transition: 0.5s;
+            }
+        }       
+    }
+}
+
+/* Servicios */

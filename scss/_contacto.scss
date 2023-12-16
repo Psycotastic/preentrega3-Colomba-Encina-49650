@@ -1,0 +1,59 @@
+/* Contacto */
+
+main#contacto {
+    .contacto {
+        display: flex;
+        flex-direction: row;
+
+        .izquierda, .derecha {
+            height: 100vh;
+            display: flex;
+        }
+
+        .izquierda {
+            width: 40%;
+            align-items: center;
+            padding: 0 5%;
+
+            h1 {
+                text-align: right;
+            }
+        }
+
+        .derecha {
+            width: 50%;
+            padding: 0 5%;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+
+            > div {
+                display: flex;
+                width: 60%;
+                align-items: center;
+                a {
+                    svg {
+                        width: 80%;
+                        padding: 1%;
+
+                        path {
+                            fill: $amarillo;
+                        }
+                    }
+
+                    &:hover {
+                        path {
+                            fill: $violeta-oscuro;
+                        }
+                    }
+                }
+            }
+
+            > a {
+                max-width: 50%;
+                @include vgen();
+            }
+
+        }
+    }
+}

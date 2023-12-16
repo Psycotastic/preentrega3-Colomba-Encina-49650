@@ -1,0 +1,86 @@
+/* MEDIA MOBILE */
+
+@media (min-width: 0px) and (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+        main {
+            width: 100vw;
+            min-height: 100vh;
+            height: auto;
+        }
+    }
+    /*Barra navegación*/
+    header{
+        max-height: 4rem;
+        width: 100vw;
+        min-width: 100vw;
+        border-right: none;
+        border-bottom: 2px solid $amarillo;
+        display: flex;
+
+
+        nav {
+            width: 100vw;
+            height: auto;
+            flex-direction: row;
+            height: auto;
+            padding: 10px 0;            
+            justify-content: space-evenly;
+
+            >div {
+                display: none;
+            }
+
+            >a {
+                transform: rotate(0deg);
+                position: initial;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+
+                li {
+                    a {
+                        .icono {
+                            width: 2rem;
+                            height: 2rem;   
+                            margin: 0 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+
+    /* Índice */
+
+    main {
+        .fura {
+            img {
+                height: 120%;
+            }
+
+            p {
+                width: 40%;
+            }
+        }
+    }
+
+    /* Portafolio */
+
+    /* Servicios */
+
+    /* Sobre mí */
+
+    /* Contacto */
+
+    main#contacto {
+        .contacto {
+            flex-direction: column;
+        }
+    }
+    
+}

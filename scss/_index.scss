@@ -1,0 +1,22 @@
+
+/*Index*/
+main {
+    .fura {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        img {
+            height: 170%;
+            opacity: 0.5;
+        }
+        p {
+            @include caja(rgb(255,230,180));
+            padding: 1rem;
+            position: absolute;
+            width: 10%;
+            bottom: 30%;
+            right: 25%;
+        }
+    }
+}
