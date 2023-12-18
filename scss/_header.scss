@@ -4,7 +4,7 @@ header {
     height: 100vh;
     width: 15vw;
     min-width: 150px;
-    border-right: 2px solid $amarillo;
+    border-right: 2px solid map-get($colores, amarillo);
 
     nav {
         padding: 10px;
@@ -17,7 +17,7 @@ header {
 
         > div {
             width: 2px;
-            background: $amarillo;
+            background: map-get($colores, amarillo);
             position: absolute;
             top: 0;
             height: 100vh;
@@ -30,7 +30,7 @@ header {
             transform:rotate(-90deg);
             font-family: $nunito;
             text-transform: uppercase;
-            color: $amarillo;
+            color: map-get($colores, amarillo);
             font-size: 0.7rem;
             letter-spacing: 3px;
         }

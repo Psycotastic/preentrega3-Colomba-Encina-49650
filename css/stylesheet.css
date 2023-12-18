@@ -577,6 +577,37 @@ main#contacto .contacto .derecha > a div p::before {
   transition: 0.5s;
 }
 
+/* MEDIA TABLET */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    /* Índice */
+    /* Portafolio */
+    /* Servicios */
+    /* Sobre mí */
+    /* Contacto */
+  }
+  body p {
+    font-size: 0.9rem;
+  }
+  body main .fura p {
+    width: 30vw;
+    bottom: 10vw;
+    right: 10vw;
+  }
+  body main#servicios .servicios {
+    grid-template-rows: 10% 5%;
+  }
+  body main#sobre .sobre .derecha {
+    width: 40%;
+  }
+  body main#contacto .contacto .derecha > div {
+    width: auto;
+  }
+  body main#contacto .contacto .derecha > a {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 /* MEDIA MOBILE */
 @media (min-width: 0px) and (max-width: 768px) {
   body {
@@ -723,37 +754,6 @@ main#contacto .contacto .derecha > a div p::before {
   }
   body main#contacto .contacto .derecha > a {
     width: 80vw;
-  }
-}
-/* MEDIA TABLET */
-@media (min-width: 768px) and (max-width: 1024px) {
-  body {
-    /* Índice */
-    /* Portafolio */
-    /* Servicios */
-    /* Sobre mí */
-    /* Contacto */
-  }
-  body p {
-    font-size: 0.9rem;
-  }
-  body main .fura p {
-    width: 30vw;
-    bottom: 10vw;
-    right: 10vw;
-  }
-  body main#servicios .servicios {
-    grid-template-rows: 10% 5%;
-  }
-  body main#sobre .sobre .derecha {
-    width: 40%;
-  }
-  body main#contacto .contacto .derecha > div {
-    width: auto;
-  }
-  body main#contacto .contacto .derecha > a {
-    width: 100%;
-    max-width: 100%;
   }
 }
 

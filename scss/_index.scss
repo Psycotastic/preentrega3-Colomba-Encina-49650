@@ -11,7 +11,7 @@ main {
             opacity: 0.5;
         }
         p {
-            @include caja(rgb(255,230,180));
+            @include caja(map-get($colores, amarillo));
             padding: 1rem;
             position: absolute;
             width: 30%;

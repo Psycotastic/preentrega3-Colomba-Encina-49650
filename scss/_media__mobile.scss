@@ -16,7 +16,7 @@
             width: 100vw;
             min-width: 100vw;
             border-right: none;
-            border-bottom: 2px solid $amarillo;
+            border-bottom: 2px solid map-get($colores, amarillo);
             display: flex;
 
 

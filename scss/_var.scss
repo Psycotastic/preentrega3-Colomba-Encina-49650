@@ -2,21 +2,16 @@
 
 $nunito: 'Nunito Sans', sans-serif;
 $display: 'Playfair Display', serif;
-$sans-serif: Arial, Helvetica, sans-serif;
-$amarillo: rgb(255,230,180);
-$violeta: rgb(175, 165, 215);
-$violeta-medio: #9588a6;
-$violeta-oscuro: #6d5d82;
-$verde: #B4CDC3;
+$colores: ("violeta": rgb(175, 165, 215), "violeta-medio": #9588a6, "violeta-oscuro": #6d5d82, "amarillo": rgb(255,230,180), "verde": #B4CDC3);
 
 @mixin vgen() {
 
     &:hover, &:active {
         div {
-            @include caja($violeta-oscuro);
-            background-color: $verde;
+            @include caja(map-get($colores, violeta-oscuro));
+            background-color: map-get($colores, verde);
             p {
-                color: $violeta-oscuro!important;
+                color: map-get($colores, violeta-oscuro)!important;
                 &::before {
                     transition: 0.5s;
                     background: url(../img/iconos-violeta/vgen.svg) 100% center no-repeat;
@@ -26,7 +21,7 @@ $verde: #B4CDC3;
     }
     div {
         height: 1rem;
-        @include caja($amarillo);
+        @include caja(map-get($colores, amarillo));
         text-transform: uppercase;
         padding: 10px;
         overflow: hidden;
@@ -56,24 +51,24 @@ $verde: #B4CDC3;
 
 @mixin caja($color) {
     border: 2px solid $color;
-    background: $violeta-oscuro;
+    background: map-get($colores, violeta-oscuro);
     color: $color;
 }
 
 @mixin fondo() {
-    background: $violeta;
+    background: map-get($colores, violeta);
 }
 
 @mixin enlace-indice() {
     width: 3vw;
     height: 3vw;
-    @include caja($amarillo);
+    @include caja(map-get($colores, amarillo));
     border-radius: 50%;
     padding: 5px;
     margin: 1vh 0;
 
     &:hover {
-        border: 2px solid $violeta-medio;
-        background-color: $violeta;
+        border: 2px solid map-get($colores, violeta-medio);
+        background-color: map-get($colores, violeta);
     }
 }

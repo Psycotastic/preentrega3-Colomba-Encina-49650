@@ -15,15 +15,15 @@ main#servicios {
         }
 
         .izquierda {
-            @include caja($amarillo);
+            @include caja(map-get($colores, amarillo));
             display: flex;
             flex-direction: column;
             justify-content: space-between;
 
             div:first-child {
                 h2 { 
-                    background-color: $amarillo;
-                    color: $violeta-oscuro;
+                    background-color: map-get($colores, amarillo);
+                    color: map-get($colores, violeta-oscuro);
                     padding: 1%;
                     text-align: center;
                 }
@@ -35,7 +35,7 @@ main#servicios {
 
             div:last-child {
                 width: 100%;
-                border-top: 2px solid $amarillo;
+                border-top: 2px solid map-get($colores, amarillo);
                 text-align: center;
                 padding: 1% 0;
 

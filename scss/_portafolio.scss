@@ -16,7 +16,7 @@ main#portafolio {
 
         .izquierda {
             grid-column: 1 / 2;
-            @include caja($amarillo);
+            @include caja(map-get($colores, amarillo));
             padding: 0 10%;
             display: flex;
             align-items: center;
