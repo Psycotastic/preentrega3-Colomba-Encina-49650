@@ -32,6 +32,7 @@ $colores: ("violeta": rgb(175, 165, 215), "violeta-medio": #9588a6, "violeta-osc
             top: -20px;
             font-weight: 700;
             font-size: 1rem;
+            padding: 0;
     
             &::before {
                 background: url(../img/iconos-amarillos/vgen.svg) 100% center no-repeat;
@@ -70,5 +71,42 @@ $colores: ("violeta": rgb(175, 165, 215), "violeta-medio": #9588a6, "violeta-osc
     &:hover {
         border: 2px solid map-get($colores, violeta-medio);
         background-color: map-get($colores, violeta);
+    }
+}
+
+@mixin division() {
+    background: map-get($colores, amarillo);
+    height: 2px;
+    width: 90%;
+    margin: 5%;
+}
+
+@mixin formulario() {
+    form {
+        display: flex;
+        flex-direction: column;
+        max-height: 40vh;
+        label {
+            font-family: $display;
+        }
+
+        input, textarea {
+            border: 2px solid map-get($colores, amarillo);
+            background-color: map-get($colores, violeta-oscuro);
+            color: map-get($colores, amarillo);
+            padding: 0.3rem;
+            margin: 0.2rem;
+            font-family: $nunito;
+            width: 60%;
+            &:last-child {
+                width: 50%;
+                text-align: center;
+            }
+            &:last-child:hover {
+                background-color: map-get($colores, verde);
+                border: 2px solid map-get($colores, violeta-oscuro);
+                color: map-get($colores, violeta-oscuro);
+            }
+        }
     }
 }

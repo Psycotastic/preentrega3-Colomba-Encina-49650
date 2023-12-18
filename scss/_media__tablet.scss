@@ -32,6 +32,13 @@
 
         main#sobre {
             .sobre {
+                .izquierda {
+                    form {
+                        input, textarea {
+                            width: 100%;
+                        }
+                    }
+                }
                 .derecha {
                     width: 40%;
                 }

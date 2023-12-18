@@ -26,10 +26,14 @@ body main h2 {
 body main h1, body main h2, body main h3, body main h4 {
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  padding: 0.5rem;
 }
 body main span, body main p, body main h2, body main h3, body main h4 {
   font-family: "Nunito Sans", sans-serif;
   color: rgb(255, 230, 180);
+}
+body main p {
+  padding: 0.2rem;
 }
 
 /*Barra de Navegación*/
@@ -159,8 +163,11 @@ main .fura {
   height: 100vh;
   overflow: hidden;
 }
-main .fura img {
-  height: 170%;
+main .fura .img {
+  height: 100%;
+  width: 100%;
+  background: url("../img/fura-escoba.png") center no-repeat;
+  background-size: cover;
   opacity: 0.5;
 }
 main .fura p {
@@ -205,21 +212,18 @@ main#portafolio .portafolio .uno {
 }
 main#portafolio .portafolio .uno:hover ~ .derecha div:nth-child(1) {
   opacity: 1;
-  transition: 0.5s;
 }
 main#portafolio .portafolio .dos {
   grid-row: 4;
 }
 main#portafolio .portafolio .dos:hover ~ .derecha div:nth-child(2) {
   opacity: 1;
-  transition: 0.5s;
 }
 main#portafolio .portafolio .tres {
   grid-row: 5;
 }
 main#portafolio .portafolio .tres:hover ~ .derecha div:nth-child(3) {
   opacity: 1;
-  transition: 0.5s;
 }
 main#portafolio .portafolio .derecha {
   height: 100vh;
@@ -233,18 +237,21 @@ main#portafolio .portafolio .derecha > div {
 }
 main#portafolio .portafolio .derecha div:nth-child(1) {
   background: url("../img/dibujos/portafolio-1.png") 90% 0 no-repeat;
+  background-size: cover;
   position: relative;
   opacity: 0;
 }
 main#portafolio .portafolio .derecha div:nth-child(2) {
   background: url("../img/dibujos/portafolio-2.png") 50% no-repeat;
   position: relative;
+  background-size: cover;
   opacity: 0;
   top: -100%;
 }
 main#portafolio .portafolio .derecha div:nth-child(3) {
   background: url("../img/dibujos/portafolio-3.png") 50% no-repeat;
   position: relative;
+  background-size: cover;
   opacity: 0;
   top: -200%;
 }
@@ -297,42 +304,36 @@ main#servicios .servicios .uno {
 }
 main#servicios .servicios .uno:hover ~ .derecha div:nth-child(1) {
   opacity: 1;
-  transition: 0.5s;
 }
 main#servicios .servicios .dos {
   grid-row: 3;
 }
 main#servicios .servicios .dos:hover ~ .derecha div:nth-child(2) {
   opacity: 1;
-  transition: 0.5s;
 }
 main#servicios .servicios .tres {
   grid-row: 4;
 }
 main#servicios .servicios .tres:hover ~ .derecha div:nth-child(3) {
   opacity: 1;
-  transition: 0.5s;
 }
 main#servicios .servicios .cuatro {
   grid-row: 4;
 }
-main#servicios .servicios .cuatro:hover ~ .derecha div:nth-child(3) {
+main#servicios .servicios .cuatro:hover ~ .derecha div:nth-child(4) {
   opacity: 1;
-  transition: 0.5s;
 }
 main#servicios .servicios .cinco {
   grid-row: 5;
 }
-main#servicios .servicios .cinco:hover ~ .derecha div:nth-child(3) {
+main#servicios .servicios .cinco:hover ~ .derecha div:nth-child(5) {
   opacity: 1;
-  transition: 0.5s;
 }
 main#servicios .servicios .seis {
   grid-row: 5;
 }
-main#servicios .servicios .seis:hover ~ .derecha div:nth-child(3) {
+main#servicios .servicios .seis:hover ~ .derecha div:nth-child(6) {
   opacity: 1;
-  transition: 0.5s;
 }
 main#servicios .servicios .siete {
   grid-row: 6;
@@ -366,6 +367,7 @@ main#servicios .servicios .siete div p {
   top: -20px;
   font-weight: 700;
   font-size: 1rem;
+  padding: 0;
 }
 main#servicios .servicios .siete div p::before {
   background: url(../img/iconos-amarillos/vgen.svg) 100% center no-repeat;
@@ -390,43 +392,44 @@ main#servicios .servicios .derecha > div {
 }
 main#servicios .servicios .derecha div:nth-child(1) {
   background: url("../img/dibujos/servicios-1.png") 50% no-repeat;
+  background-size: cover;
   position: relative;
   opacity: 0;
-  transition: 0.5s;
 }
 main#servicios .servicios .derecha div:nth-child(2) {
-  background: url("../img/dibujos/servicios-2.png") 90% 0 no-repeat;
+  background: url("../img/dibujos/servicios-2.png") 50% 0 no-repeat;
+  background-size: cover;
   position: relative;
   opacity: 0;
   top: -100%;
-  transition: 0.5s;
 }
 main#servicios .servicios .derecha div:nth-child(3) {
-  background: url("../img/dibujos/servicios-3.png") 90% 0 no-repeat;
+  background: url("../img/dibujos/servicios-3.gif") 50% 0 no-repeat;
+  background-size: cover;
   position: relative;
   opacity: 0;
   top: -200%;
-  transition: 0.5s;
 }
 main#servicios .servicios .derecha div:nth-child(4) {
   background: url("../img/dibujos/servicios-4.png") 50% no-repeat;
+  background-size: cover;
   position: relative;
   opacity: 0;
-  transition: 0.5s;
+  top: -300%;
 }
 main#servicios .servicios .derecha div:nth-child(5) {
   background: url("../img/dibujos/servicios-5.png") 90% 0 no-repeat;
+  background-size: cover;
   position: relative;
   opacity: 0;
-  top: -100%;
-  transition: 0.5s;
+  top: -400%;
 }
 main#servicios .servicios .derecha div:nth-child(6) {
-  background: url("../img/dibujos/portafolio-6.png") 90% 0 no-repeat;
+  background: url("../img/dibujos/servicios-6.png") 50% 0 no-repeat;
+  background-size: cover;
   position: relative;
   opacity: 0;
-  top: -200%;
-  transition: 0.5s;
+  top: -500%;
 }
 
 /* Servicios */
@@ -440,9 +443,42 @@ main#sobre .sobre .izquierda, main#sobre .sobre .derecha {
   flex-direction: column;
   justify-content: center;
 }
+main#sobre .sobre .izquierda div, main#sobre .sobre .derecha div {
+  background: rgb(255, 230, 180);
+  height: 2px;
+  width: 90%;
+  margin: 5%;
+}
 main#sobre .sobre .izquierda {
   width: 45%;
   padding: 5%;
+  color: rgb(255, 230, 180);
+}
+main#sobre .sobre .izquierda form {
+  display: flex;
+  flex-direction: column;
+  max-height: 40vh;
+}
+main#sobre .sobre .izquierda form label {
+  font-family: "Playfair Display", serif;
+}
+main#sobre .sobre .izquierda form input, main#sobre .sobre .izquierda form textarea {
+  border: 2px solid rgb(255, 230, 180);
+  background-color: #6d5d82;
+  color: rgb(255, 230, 180);
+  padding: 0.3rem;
+  margin: 0.2rem;
+  font-family: "Nunito Sans", sans-serif;
+  width: 60%;
+}
+main#sobre .sobre .izquierda form input:last-child, main#sobre .sobre .izquierda form textarea:last-child {
+  width: 50%;
+  text-align: center;
+}
+main#sobre .sobre .izquierda form input:last-child:hover, main#sobre .sobre .izquierda form textarea:last-child:hover {
+  background-color: #B4CDC3;
+  border: 2px solid #6d5d82;
+  color: #6d5d82;
 }
 main#sobre .sobre .derecha {
   width: 30%;
@@ -564,6 +600,7 @@ main#contacto .contacto .derecha > a div p {
   top: -20px;
   font-weight: 700;
   font-size: 1rem;
+  padding: 0;
 }
 main#contacto .contacto .derecha > a div p::before {
   background: url(../img/iconos-amarillos/vgen.svg) 100% center no-repeat;
@@ -596,6 +633,9 @@ main#contacto .contacto .derecha > a div p::before {
   }
   body main#servicios .servicios {
     grid-template-rows: 10% 5%;
+  }
+  body main#sobre .sobre .izquierda form input, body main#sobre .sobre .izquierda form textarea {
+    width: 100%;
   }
   body main#sobre .sobre .derecha {
     width: 40%;
@@ -724,6 +764,9 @@ main#contacto .contacto .derecha > a div p::before {
     width: 90%;
     padding: 5%;
     height: auto;
+  }
+  body main#sobre .sobre .izquierda form input, body main#sobre .sobre .izquierda form textarea {
+    width: 100%;
   }
   body main#contacto .contacto .izquierda {
     align-items: flex-end;

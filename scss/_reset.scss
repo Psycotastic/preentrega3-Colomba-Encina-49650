@@ -27,11 +27,16 @@ body {
         h1, h2, h3, h4 {
             text-transform: uppercase;
             letter-spacing: 0.1rem;
+            padding: 0.5rem;
         }
 
         span, p, h2, h3, h4 {
             font-family: $nunito;
             color: map-get($colores, amarillo);
+        }
+
+        p {
+            padding: 0.2rem;
         }
     }
 }

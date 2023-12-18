@@ -6,8 +6,11 @@ main {
         align-items: center;
         height: 100vh;
         overflow: hidden;
-        img {
-            height: 170%;
+        .img {
+            height: 100%;
+            width: 100%;
+            background: url('../img/fura-escoba.png') center no-repeat;
+            background-size: cover;
             opacity: 0.5;
         }
         p {

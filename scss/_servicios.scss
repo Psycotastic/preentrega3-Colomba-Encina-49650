@@ -55,7 +55,6 @@ main#servicios {
 
             &:hover ~ .derecha div:nth-child(1){
                 opacity: 1;
-                transition: 0.5s;
             }
         }
 
@@ -63,7 +62,6 @@ main#servicios {
             grid-row: 3;
             &:hover ~ .derecha div:nth-child(2){
                 opacity: 1;
-                transition: 0.5s;
             }
         }
 
@@ -71,32 +69,28 @@ main#servicios {
             grid-row: 4;
             &:hover ~ .derecha div:nth-child(3){
                 opacity: 1;
-                transition: 0.5s;
             }
         }
 
         .cuatro {
             grid-row: 4;
-            &:hover ~ .derecha div:nth-child(3){
+            &:hover ~ .derecha div:nth-child(4){
                 opacity: 1;
-                transition: 0.5s;
             }
         }
 
         .cinco {
             grid-row: 5;
-            &:hover ~ .derecha div:nth-child(3){
+            &:hover ~ .derecha div:nth-child(5){
                 opacity: 1;
-                transition: 0.5s;
             }
 
         }
 
         .seis {
             grid-row: 5;
-            &:hover ~ .derecha div:nth-child(3){
+            &:hover ~ .derecha div:nth-child(6){
                 opacity: 1;
-                transition: 0.5s;
             }
 
         }
@@ -120,46 +114,47 @@ main#servicios {
             
             div:nth-child(1) {
                 background: url('../img/dibujos/servicios-1.png')50% no-repeat;
+                background-size: cover;
                 position: relative;
                 opacity: 0;
-                transition: 0.5s;
             }
             div:nth-child(2) {
-                background: url('../img/dibujos/servicios-2.png')90% 0 no-repeat;
+                background: url('../img/dibujos/servicios-2.png')50% 0 no-repeat;
+                background-size: cover;
                 position: relative;
                 opacity: 0;
                 top: -100%;
-                transition: 0.5s;
             }
             
             div:nth-child(3) {
-                background: url('../img/dibujos/servicios-3.png')90% 0 no-repeat;
+                background: url('../img/dibujos/servicios-3.gif')50% 0 no-repeat;
+                background-size: cover;
                 position: relative;
                 opacity: 0;
                 top: -200%;
-                transition: 0.5s;
             }
 
             div:nth-child(4) {
                 background: url('../img/dibujos/servicios-4.png')50% no-repeat;
+                background-size: cover;
                 position: relative;
                 opacity: 0;
-                transition: 0.5s;
+                top: -300%;
             }
             div:nth-child(5) {
                 background: url('../img/dibujos/servicios-5.png')90% 0 no-repeat;
+                background-size: cover;
                 position: relative;
                 opacity: 0;
-                top: -100%;
-                transition: 0.5s;
+                top: -400%;
             }
             
             div:nth-child(6) {
-                background: url('../img/dibujos/portafolio-6.png')90% 0 no-repeat;
+                background: url('../img/dibujos/servicios-6.png')50% 0 no-repeat;
+                background-size: cover;
                 position: relative;
                 opacity: 0;
-                top: -200%;
-                transition: 0.5s;
+                top: -500%;
             }
         }       
     }
