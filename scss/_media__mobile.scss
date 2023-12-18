@@ -9,77 +9,188 @@
             min-height: 100vh;
             height: auto;
         }
-    }
-    /*Barra navegación*/
-    header{
-        max-height: 4rem;
-        width: 100vw;
-        min-width: 100vw;
-        border-right: none;
-        border-bottom: 2px solid $amarillo;
-        display: flex;
-
-
-        nav {
+    
+        /*Barra navegación*/
+        header{
+            max-height: 4rem;
             width: 100vw;
-            height: auto;
-            flex-direction: row;
-            height: auto;
-            padding: 10px 0;            
-            justify-content: space-evenly;
+            min-width: 100vw;
+            border-right: none;
+            border-bottom: 2px solid $amarillo;
+            display: flex;
 
-            >div {
-                display: none;
-            }
 
-            >a {
-                transform: rotate(0deg);
-                position: initial;
-            }
-
-            ul {
-                display: flex;
+            nav {
+                width: 100vw;
+                height: auto;
                 flex-direction: row;
+                height: auto;
+                padding: 10px 0;            
+                justify-content: space-evenly;
 
-                li {
-                    a {
-                        .icono {
-                            width: 2rem;
-                            height: 2rem;   
-                            margin: 0 0.5rem;
+                >div {
+                    display: none;
+                }
+
+                >a {
+                    transform: rotate(0deg);
+                    position: initial;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+
+                    li {
+                        a {
+                            .icono {
+                                width: 2rem;
+                                height: 2rem;   
+                                margin: 0 0.5rem;
+                            }
                         }
                     }
                 }
             }
+        
         }
-    
-    }
 
-    /* Índice */
+        /* Índice */
 
-    main {
-        .fura {
-            img {
-                height: 120%;
+        main {
+            .fura {
+                img {
+                    height: 120%;
+                }
+
+                p {
+                    width: 40%;
+                }
+            }
+        }
+
+        /* Portafolio */
+
+        main#portafolio .portafolio,
+        main#servicios .servicios {
+            height: auto;
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+
+            .izquierda {
+                grid-column: 1;
+                margin: 0 5%;
+                h2 {
+                    height: auto;
+                }
             }
 
-            p {
-                width: 40%;
+            .derecha {
+                height: 20vh;
+                grid-column: 1;
+
+                & div:nth-child(1){
+                    opacity: 1;
+                    background-position: center 30%;
+                }
             }
         }
-    }
 
-    /* Portafolio */
+        main#portafolio { 
+            .portafolio{
+                .izquierda {
+                    padding: 5vh;
+                }
+            }
 
-    /* Servicios */
+        }
 
-    /* Sobre mí */
+        /* Servicios */
 
-    /* Contacto */
+        main#servicios {
+            .servicios {
+                h1, .siete {
+                    grid-column: 1;
+                }
 
-    main#contacto {
-        .contacto {
+                .dos {
+                    grid-row: 4;
+                }
+                .tres {
+                    grid-row: 5;
+                }
+                .cuatro {
+                    grid-row: 6;
+                }
+
+                .cinco {
+                    grid-row: 7;
+                }
+
+                .seis {
+                    grid-row: 8;
+                }
+
+                .siete {
+                    margin: 0 5%;
+                    grid-row: 9;
+                }
+            }
+        }
+
+        /* Sobre mí */
+        
+        main#sobre .sobre, 
+        main#contacto .contacto {
+            display: flex;
             flex-direction: column;
+            height: auto;
+
+            .izquierda, .derecha {
+                width: 90%;
+                padding: 5%;
+                height: auto;
+            }
+        }
+
+        /* Contacto */
+
+        main#contacto {
+            .contacto {
+                .izquierda {
+                    align-items: flex-end;
+                    justify-content: center;
+                    h1 {
+                        text-align: center;
+                    }
+                }
+
+                .derecha {
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    > div {
+                        width: 100%;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        > a {
+                            width: 40vw;
+                            height: 30vw;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            > div {
+                                width: 40%;
+                                height: 60%;
+                            }
+                        }
+                    }
+
+                    > a {
+                        width: 80vw;
+                    }
+                }
+            }
         }
     }
     

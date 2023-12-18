@@ -32,25 +32,86 @@ main#contacto {
                 width: 60%;
                 align-items: center;
                 a {
-                    svg {
-                        width: 80%;
+                    width: 100%;
+                    > div {
+                        width: 60%;
                         padding: 1%;
-
-                        path {
-                            fill: $amarillo;
-                        }
+                        height: 10vh;
                     }
 
-                    &:hover {
-                        path {
-                            fill: $violeta-oscuro;
+                    &[href*="x.com"]{
+                        div{
+                            background-image: url('../img/iconos-amarillos/x.svg');
+                            background-size: 100%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+
+                        &:hover {
+                            div {
+                            background-image: url('../img/iconos-violeta/x.svg');
+                            background-size: 100%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            }
+                        }
+                    }
+                    &[href*="twitch"]{
+                        div {
+                            background-image: url('../img/iconos-amarillos/twitch.svg');
+                            background-size: 100%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+
+                        &:hover {
+                            div {
+                            background-image: url('../img/iconos-violeta/twitch.svg');
+                            background-size: 100%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            }
+                        }
+                    }
+                    &[href*="instagram"]{
+                        div{                       
+                            background-image: url('../img/iconos-amarillos/ig.svg');
+                            background-size: 100%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+
+                        &:hover {
+                            div {
+                            background-image: url('../img/iconos-violeta/ig.svg');
+                            background-size: 100%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            }
+                        }
+                    }
+                    &[href*="mailto"]{
+                        div{
+                            background-image: url('../img/iconos-amarillos/correo.svg');
+                            background-size: 100%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+
+                        &:hover {
+                            div {
+                            background-image: url('../img/iconos-violeta/correo.svg');
+                            background-size: 100%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            }
                         }
                     }
                 }
             }
 
             > a {
-                max-width: 50%;
+                max-width: 60%;
                 @include vgen();
             }
 

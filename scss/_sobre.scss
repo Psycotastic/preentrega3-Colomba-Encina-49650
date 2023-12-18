@@ -1,0 +1,22 @@
+/* Sobre mí */
+
+main#sobre {
+    .sobre {
+        display: flex;
+        height: 100vh;
+
+        .izquierda, .derecha{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        .izquierda {
+            width: 45%;
+            padding: 5%;
+        }
+        .derecha {
+            width: 30%;
+        }
+    }
+}

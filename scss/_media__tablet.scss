@@ -1,3 +1,57 @@
+/* MEDIA TABLET */
+
 @media (min-width: 768px) and (max-width: 1024px) { 
 
+    body {
+        p {
+        font-size: 0.9rem;
+        }
+        /* Índice */
+
+        main {
+            .fura {
+                p {
+                    width: 30vw;
+                    bottom: 10vw;
+                    right: 10vw;
+                }
+            }
+        }
+        
+        /* Portafolio */
+
+        /* Servicios */
+
+        main#servicios {
+            .servicios {
+                grid-template-rows: 10% 5%;
+            }
+        }
+
+        /* Sobre mí */
+
+        main#sobre {
+            .sobre {
+                .derecha {
+                    width: 40%;
+                }
+            }
+        }
+
+        /* Contacto */
+
+        main#contacto {
+            .contacto {
+                .derecha {
+                    > div {
+                        width: auto;
+                    }
+                    > a {
+                        width: 100%;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }

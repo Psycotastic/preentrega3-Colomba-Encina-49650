@@ -43,41 +43,100 @@ header {
                 a {
                     .icono {
                         @include enlace-indice;
+                        transition: 0.5s;
                     }
 
-                    &[href*="index"] .icono {
-                        background-image: url('../img/iconos-amarillos/inicio.svg');
-                        background-size: 60%;
-                        background-position: center;
-                        background-repeat: no-repeat;
+                    &:hover {
+                        .icono {
+                            transition: 0.5s;
+                        }
                     }
 
-                    &[href*="portafolio"] .icono {
-                        background-image: url('../img/iconos-amarillos/portafolio.svg');
-                        background-size: 60%;
-                        background-position: center;
-                        background-repeat: no-repeat;
+                    &[href*="index"] {
+                        .icono {
+                            background-image: url('../img/iconos-amarillos/inicio.svg');
+                            background-size: 60%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+
+                        &:hover {
+                            .icono {
+                            background-image: url('../img/iconos-violeta/inicio.svg');
+                            background-size: 60%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            }
+                        }
                     }
 
-                    &[href*="servicios"] .icono {
-                        background-image: url('../img/iconos-amarillos/servicios.svg');
-                        background-size: 60%;
-                        background-position: center;
-                        background-repeat: no-repeat;
-                    }
+                    &[href*="portafolio"] {
+                        .icono {
+                            background-image: url('../img/iconos-amarillos/portafolio.svg');
+                            background-size: 60%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
 
-                    &[href*="sobre"] .icono {
-                        background-image: url('../img/iconos-amarillos/sobre.svg');
-                        background-size: 60%;
-                        background-position: center;
-                        background-repeat: no-repeat;
+                        &:hover {
+                            .icono {
+                            background-image: url('../img/iconos-violeta/portafolio.svg');
+                            background-size: 60%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            }
+                        }
                     }
+                    &[href*="servicios"] { 
+                        .icono {
+                            background-image: url('../img/iconos-amarillos/servicios.svg');
+                            background-size: 60%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
 
-                    &[href*="contacto"] .icono {
-                        background-image: url('../img/iconos-amarillos/contacto.svg');
-                        background-size: 60%;
-                        background-position: center;
-                        background-repeat: no-repeat;
+                        &:hover {
+                            .icono {
+                            background-image: url('../img/iconos-violeta/servicios.svg');
+                            background-size: 60%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            }
+                        }
+                    }
+                    &[href*="sobre"] {
+                        .icono {
+                            background-image: url('../img/iconos-amarillos/sobre.svg');
+                            background-size: 60%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+
+                        &:hover {
+                            .icono {
+                            background-image: url('../img/iconos-violeta/sobre.svg');
+                            background-size: 60%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            }
+                        }
+                    }
+                    &[href*="contacto"] {
+                        .icono {
+                            background-image: url('../img/iconos-amarillos/contacto.svg');
+                            background-size: 60%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+
+                        &:hover {
+                            .icono {
+                            background-image: url('../img/iconos-violeta/contacto.svg');
+                            background-size: 60%;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            }
+                        }
                     }
                 }
             }

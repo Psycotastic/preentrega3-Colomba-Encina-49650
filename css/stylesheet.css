@@ -1,9 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Reinicio */
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  transition: 0.5s;
 }
 
 body {
@@ -18,7 +20,14 @@ body main h1 {
   font-family: "Playfair Display", serif;
   color: rgb(255, 230, 180);
 }
-body main p, body main h2, body main h3, body main h4 {
+body main h2 {
+  font-size: 1.2rem;
+}
+body main h1, body main h2, body main h3, body main h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+body main span, body main p, body main h2, body main h3, body main h4 {
   font-family: "Nunito Sans", sans-serif;
   color: rgb(255, 230, 180);
 }
@@ -67,14 +76,29 @@ header nav ul li {
 header nav ul li a .icono {
   width: 3vw;
   height: 3vw;
-  background-color: rgb(175, 165, 215);
   border: 2px solid rgb(255, 230, 180);
+  background: #6d5d82;
+  color: rgb(255, 230, 180);
   border-radius: 50%;
   padding: 5px;
   margin: 1vh 0;
+  transition: 0.5s;
+}
+header nav ul li a .icono:hover {
+  border: 2px solid #9588a6;
+  background-color: rgb(175, 165, 215);
+}
+header nav ul li a:hover .icono {
+  transition: 0.5s;
 }
 header nav ul li a[href*=index] .icono {
   background-image: url("../img/iconos-amarillos/inicio.svg");
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+header nav ul li a[href*=index]:hover .icono {
+  background-image: url("../img/iconos-violeta/inicio.svg");
   background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
@@ -85,8 +109,20 @@ header nav ul li a[href*=portafolio] .icono {
   background-position: center;
   background-repeat: no-repeat;
 }
+header nav ul li a[href*=portafolio]:hover .icono {
+  background-image: url("../img/iconos-violeta/portafolio.svg");
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 header nav ul li a[href*=servicios] .icono {
   background-image: url("../img/iconos-amarillos/servicios.svg");
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+header nav ul li a[href*=servicios]:hover .icono {
+  background-image: url("../img/iconos-violeta/servicios.svg");
   background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
@@ -97,8 +133,20 @@ header nav ul li a[href*=sobre] .icono {
   background-position: center;
   background-repeat: no-repeat;
 }
+header nav ul li a[href*=sobre]:hover .icono {
+  background-image: url("../img/iconos-violeta/sobre.svg");
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 header nav ul li a[href*=contacto] .icono {
   background-image: url("../img/iconos-amarillos/contacto.svg");
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+header nav ul li a[href*=contacto]:hover .icono {
+  background-image: url("../img/iconos-violeta/contacto.svg");
   background-size: 60%;
   background-position: center;
   background-repeat: no-repeat;
@@ -117,13 +165,13 @@ main .fura img {
 }
 main .fura p {
   border: 2px solid rgb(255, 230, 180);
-  background: #968cc3;
+  background: #6d5d82;
   color: rgb(255, 230, 180);
   padding: 1rem;
   position: absolute;
-  width: 10%;
-  bottom: 30%;
-  right: 25%;
+  width: 30%;
+  bottom: 10vw;
+  right: 10vw;
 }
 
 /*Portafolio*/
@@ -137,9 +185,20 @@ main#portafolio .portafolio {
 main#portafolio .portafolio h1 {
   grid-column: 1/2;
   grid-row: 2;
+  margin-left: 2rem;
 }
 main#portafolio .portafolio .izquierda {
   grid-column: 1/2;
+  border: 2px solid rgb(255, 230, 180);
+  background: #6d5d82;
+  color: rgb(255, 230, 180);
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+}
+main#portafolio .portafolio .izquierda h2 {
+  height: 1.2rem;
 }
 main#portafolio .portafolio .uno {
   grid-row: 3;
@@ -173,20 +232,197 @@ main#portafolio .portafolio .derecha > div {
   height: 100%;
 }
 main#portafolio .portafolio .derecha div:nth-child(1) {
-  background: url("../img/ilus-naorta.png") 90% 0 no-repeat;
+  background: url("../img/dibujos/portafolio-1.png") 90% 0 no-repeat;
+  position: relative;
+  opacity: 0;
+}
+main#portafolio .portafolio .derecha div:nth-child(2) {
+  background: url("../img/dibujos/portafolio-2.png") 50% no-repeat;
+  position: relative;
+  opacity: 0;
+  top: -100%;
+}
+main#portafolio .portafolio .derecha div:nth-child(3) {
+  background: url("../img/dibujos/portafolio-3.png") 50% no-repeat;
+  position: relative;
+  opacity: 0;
+  top: -200%;
+}
+
+/* Servicios */
+/*Servicios*/
+main#servicios .servicios {
+  display: grid;
+  grid-template-columns: 2% 25% 25% 48%;
+  grid-template-rows: 10% 5% 18% 18% 18% 6%;
+  grid-gap: 1%;
+  height: 100vh;
+}
+main#servicios .servicios h1 {
+  grid-column: 2/3;
+  grid-row: 2;
+  margin-left: 2rem;
+}
+main#servicios .servicios .izquierda {
+  border: 2px solid rgb(255, 230, 180);
+  background: #6d5d82;
+  color: rgb(255, 230, 180);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main#servicios .servicios .izquierda div:first-child h2 {
+  background-color: rgb(255, 230, 180);
+  color: #6d5d82;
+  padding: 1%;
+  text-align: center;
+}
+main#servicios .servicios .izquierda div:first-child p {
+  padding: 1% 2%;
+}
+main#servicios .servicios .izquierda div:last-child {
+  width: 100%;
+  border-top: 2px solid rgb(255, 230, 180);
+  text-align: center;
+  padding: 1% 0;
+}
+main#servicios .servicios .uno, main#servicios .servicios .tres, main#servicios .servicios .cinco {
+  grid-column: 2;
+}
+main#servicios .servicios .dos, main#servicios .servicios .cuatro, main#servicios .servicios .seis {
+  grid-column: 3;
+}
+main#servicios .servicios .uno {
+  grid-row: 3;
+}
+main#servicios .servicios .uno:hover ~ .derecha div:nth-child(1) {
+  opacity: 1;
+  transition: 0.5s;
+}
+main#servicios .servicios .dos {
+  grid-row: 3;
+}
+main#servicios .servicios .dos:hover ~ .derecha div:nth-child(2) {
+  opacity: 1;
+  transition: 0.5s;
+}
+main#servicios .servicios .tres {
+  grid-row: 4;
+}
+main#servicios .servicios .tres:hover ~ .derecha div:nth-child(3) {
+  opacity: 1;
+  transition: 0.5s;
+}
+main#servicios .servicios .cuatro {
+  grid-row: 4;
+}
+main#servicios .servicios .cuatro:hover ~ .derecha div:nth-child(3) {
+  opacity: 1;
+  transition: 0.5s;
+}
+main#servicios .servicios .cinco {
+  grid-row: 5;
+}
+main#servicios .servicios .cinco:hover ~ .derecha div:nth-child(3) {
+  opacity: 1;
+  transition: 0.5s;
+}
+main#servicios .servicios .seis {
+  grid-row: 5;
+}
+main#servicios .servicios .seis:hover ~ .derecha div:nth-child(3) {
+  opacity: 1;
+  transition: 0.5s;
+}
+main#servicios .servicios .siete {
+  grid-row: 6;
+  grid-column: 2/4;
+}
+main#servicios .servicios .siete:hover div, main#servicios .servicios .siete:active div {
+  border: 2px solid #6d5d82;
+  background: #6d5d82;
+  color: #6d5d82;
+  background-color: #B4CDC3;
+}
+main#servicios .servicios .siete:hover div p, main#servicios .servicios .siete:active div p {
+  color: #6d5d82 !important;
+}
+main#servicios .servicios .siete:hover div p::before, main#servicios .servicios .siete:active div p::before {
+  transition: 0.5s;
+  background: url(../img/iconos-violeta/vgen.svg) 100% center no-repeat;
+}
+main#servicios .servicios .siete div {
+  height: 1rem;
+  border: 2px solid rgb(255, 230, 180);
+  background: #6d5d82;
+  color: rgb(255, 230, 180);
+  text-transform: uppercase;
+  padding: 10px;
+  overflow: hidden;
+}
+main#servicios .servicios .siete div p {
+  height: 1rem;
+  position: relative;
+  top: -20px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+main#servicios .servicios .siete div p::before {
+  background: url(../img/iconos-amarillos/vgen.svg) 100% center no-repeat;
+  width: 20%;
+  height: 2rem;
+  position: relative;
+  top: 10px;
+  display: inline-block;
+  content: " ";
+  margin-right: 10px;
+  transition: 0.5s;
+}
+main#servicios .servicios .derecha {
+  height: 100vh;
+  grid-column: 4;
+  overflow: hidden;
+  grid-row: 1;
+}
+main#servicios .servicios .derecha > div {
+  width: 100%;
+  height: 100%;
+}
+main#servicios .servicios .derecha div:nth-child(1) {
+  background: url("../img/dibujos/servicios-1.png") 50% no-repeat;
   position: relative;
   opacity: 0;
   transition: 0.5s;
 }
-main#portafolio .portafolio .derecha div:nth-child(2) {
-  background: url("../img/ilus-naorta.png") 90% 0 no-repeat;
+main#servicios .servicios .derecha div:nth-child(2) {
+  background: url("../img/dibujos/servicios-2.png") 90% 0 no-repeat;
   position: relative;
   opacity: 0;
   top: -100%;
   transition: 0.5s;
 }
-main#portafolio .portafolio .derecha div:nth-child(3) {
-  background: url("../img/ilus-naorta.png") 90% 0 no-repeat;
+main#servicios .servicios .derecha div:nth-child(3) {
+  background: url("../img/dibujos/servicios-3.png") 90% 0 no-repeat;
+  position: relative;
+  opacity: 0;
+  top: -200%;
+  transition: 0.5s;
+}
+main#servicios .servicios .derecha div:nth-child(4) {
+  background: url("../img/dibujos/servicios-4.png") 50% no-repeat;
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
+}
+main#servicios .servicios .derecha div:nth-child(5) {
+  background: url("../img/dibujos/servicios-5.png") 90% 0 no-repeat;
+  position: relative;
+  opacity: 0;
+  top: -100%;
+  transition: 0.5s;
+}
+main#servicios .servicios .derecha div:nth-child(6) {
+  background: url("../img/dibujos/portafolio-6.png") 90% 0 no-repeat;
   position: relative;
   opacity: 0;
   top: -200%;
@@ -194,6 +430,24 @@ main#portafolio .portafolio .derecha div:nth-child(3) {
 }
 
 /* Servicios */
+/* Sobre mí */
+main#sobre .sobre {
+  display: flex;
+  height: 100vh;
+}
+main#sobre .sobre .izquierda, main#sobre .sobre .derecha {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main#sobre .sobre .izquierda {
+  width: 45%;
+  padding: 5%;
+}
+main#sobre .sobre .derecha {
+  width: 30%;
+}
+
 /* Contacto */
 main#contacto .contacto {
   display: flex;
@@ -223,34 +477,82 @@ main#contacto .contacto .derecha > div {
   width: 60%;
   align-items: center;
 }
-main#contacto .contacto .derecha > div a svg {
-  width: 80%;
+main#contacto .contacto .derecha > div a {
+  width: 100%;
+}
+main#contacto .contacto .derecha > div a > div {
+  width: 60%;
   padding: 1%;
+  height: 10vh;
 }
-main#contacto .contacto .derecha > div a svg path {
-  fill: rgb(255, 230, 180);
+main#contacto .contacto .derecha > div a[href*="x.com"] div {
+  background-image: url("../img/iconos-amarillos/x.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-main#contacto .contacto .derecha > div a:hover path {
-  fill: #968cc3;
+main#contacto .contacto .derecha > div a[href*="x.com"]:hover div {
+  background-image: url("../img/iconos-violeta/x.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main#contacto .contacto .derecha > div a[href*=twitch] div {
+  background-image: url("../img/iconos-amarillos/twitch.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main#contacto .contacto .derecha > div a[href*=twitch]:hover div {
+  background-image: url("../img/iconos-violeta/twitch.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main#contacto .contacto .derecha > div a[href*=instagram] div {
+  background-image: url("../img/iconos-amarillos/ig.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main#contacto .contacto .derecha > div a[href*=instagram]:hover div {
+  background-image: url("../img/iconos-violeta/ig.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main#contacto .contacto .derecha > div a[href*=mailto] div {
+  background-image: url("../img/iconos-amarillos/correo.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main#contacto .contacto .derecha > div a[href*=mailto]:hover div {
+  background-image: url("../img/iconos-violeta/correo.svg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 main#contacto .contacto .derecha > a {
-  max-width: 50%;
+  max-width: 60%;
 }
-main#contacto .contacto .derecha > a:hover div {
-  border: 2px solid rgb(160, 145, 200);
-  background: #968cc3;
-  color: rgb(160, 145, 200);
+main#contacto .contacto .derecha > a:hover div, main#contacto .contacto .derecha > a:active div {
+  border: 2px solid #6d5d82;
+  background: #6d5d82;
+  color: #6d5d82;
+  background-color: #B4CDC3;
 }
-main#contacto .contacto .derecha > a:hover div p {
-  color: rgb(175, 165, 215) !important;
+main#contacto .contacto .derecha > a:hover div p, main#contacto .contacto .derecha > a:active div p {
+  color: #6d5d82 !important;
 }
-main#contacto .contacto .derecha > a:hover div p::before {
+main#contacto .contacto .derecha > a:hover div p::before, main#contacto .contacto .derecha > a:active div p::before {
+  transition: 0.5s;
   background: url(../img/iconos-violeta/vgen.svg) 100% center no-repeat;
 }
 main#contacto .contacto .derecha > a div {
   height: 1rem;
   border: 2px solid rgb(255, 230, 180);
-  background: #968cc3;
+  background: #6d5d82;
   color: rgb(255, 230, 180);
   text-transform: uppercase;
   padding: 10px;
@@ -272,20 +574,26 @@ main#contacto .contacto .derecha > a div p::before {
   display: inline-block;
   content: " ";
   margin-right: 10px;
+  transition: 0.5s;
 }
 
 /* MEDIA MOBILE */
 @media (min-width: 0px) and (max-width: 768px) {
   body {
     flex-direction: column;
+    /*Barra navegación*/
+    /* Índice */
+    /* Portafolio */
+    /* Servicios */
+    /* Sobre mí */
+    /* Contacto */
   }
   body main {
     width: 100vw;
     min-height: 100vh;
     height: auto;
   }
-  /*Barra navegación*/
-  header {
+  body header {
     max-height: 4rem;
     width: 100vw;
     min-width: 100vw;
@@ -293,7 +601,7 @@ main#contacto .contacto .derecha > a div p::before {
     border-bottom: 2px solid rgb(255, 230, 180);
     display: flex;
   }
-  header nav {
+  body header nav {
     width: 100vw;
     height: auto;
     flex-direction: row;
@@ -301,35 +609,151 @@ main#contacto .contacto .derecha > a div p::before {
     padding: 10px 0;
     justify-content: space-evenly;
   }
-  header nav > div {
+  body header nav > div {
     display: none;
   }
-  header nav > a {
+  body header nav > a {
     transform: rotate(0deg);
     position: initial;
   }
-  header nav ul {
+  body header nav ul {
     display: flex;
     flex-direction: row;
   }
-  header nav ul li a .icono {
+  body header nav ul li a .icono {
     width: 2rem;
     height: 2rem;
     margin: 0 0.5rem;
   }
-  /* Índice */
-  main .fura img {
+  body main .fura img {
     height: 120%;
   }
-  main .fura p {
+  body main .fura p {
     width: 40%;
   }
-  /* Portafolio */
-  /* Servicios */
-  /* Sobre mí */
-  /* Contacto */
-  main#contacto .contacto {
+  body main#portafolio .portafolio,
+  body main#servicios .servicios {
+    height: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+  body main#portafolio .portafolio .izquierda,
+  body main#servicios .servicios .izquierda {
+    grid-column: 1;
+    margin: 0 5%;
+  }
+  body main#portafolio .portafolio .izquierda h2,
+  body main#servicios .servicios .izquierda h2 {
+    height: auto;
+  }
+  body main#portafolio .portafolio .derecha,
+  body main#servicios .servicios .derecha {
+    height: 20vh;
+    grid-column: 1;
+  }
+  body main#portafolio .portafolio .derecha div:nth-child(1),
+  body main#servicios .servicios .derecha div:nth-child(1) {
+    opacity: 1;
+    background-position: center 30%;
+  }
+  body main#portafolio .portafolio .izquierda {
+    padding: 5vh;
+  }
+  body main#servicios .servicios h1, body main#servicios .servicios .siete {
+    grid-column: 1;
+  }
+  body main#servicios .servicios .dos {
+    grid-row: 4;
+  }
+  body main#servicios .servicios .tres {
+    grid-row: 5;
+  }
+  body main#servicios .servicios .cuatro {
+    grid-row: 6;
+  }
+  body main#servicios .servicios .cinco {
+    grid-row: 7;
+  }
+  body main#servicios .servicios .seis {
+    grid-row: 8;
+  }
+  body main#servicios .servicios .siete {
+    margin: 0 5%;
+    grid-row: 9;
+  }
+  body main#sobre .sobre,
+  body main#contacto .contacto {
+    display: flex;
     flex-direction: column;
+    height: auto;
+  }
+  body main#sobre .sobre .izquierda, body main#sobre .sobre .derecha,
+  body main#contacto .contacto .izquierda,
+  body main#contacto .contacto .derecha {
+    width: 90%;
+    padding: 5%;
+    height: auto;
+  }
+  body main#contacto .contacto .izquierda {
+    align-items: flex-end;
+    justify-content: center;
+  }
+  body main#contacto .contacto .izquierda h1 {
+    text-align: center;
+  }
+  body main#contacto .contacto .derecha {
+    justify-content: flex-start;
+    align-items: center;
+  }
+  body main#contacto .contacto .derecha > div {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  body main#contacto .contacto .derecha > div > a {
+    width: 40vw;
+    height: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body main#contacto .contacto .derecha > div > a > div {
+    width: 40%;
+    height: 60%;
+  }
+  body main#contacto .contacto .derecha > a {
+    width: 80vw;
+  }
+}
+/* MEDIA TABLET */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    /* Índice */
+    /* Portafolio */
+    /* Servicios */
+    /* Sobre mí */
+    /* Contacto */
+  }
+  body p {
+    font-size: 0.9rem;
+  }
+  body main .fura p {
+    width: 30vw;
+    bottom: 10vw;
+    right: 10vw;
+  }
+  body main#servicios .servicios {
+    grid-template-rows: 10% 5%;
+  }
+  body main#sobre .sobre .derecha {
+    width: 40%;
+  }
+  body main#contacto .contacto .derecha > div {
+    width: auto;
+  }
+  body main#contacto .contacto .derecha > a {
+    width: 100%;
+    max-width: 100%;
   }
 }
 

@@ -14,9 +14,9 @@ main {
             @include caja(rgb(255,230,180));
             padding: 1rem;
             position: absolute;
-            width: 10%;
-            bottom: 30%;
-            right: 25%;
+            width: 30%;
+            bottom: 10vw;
+            right: 10vw;
         }
     }
 }

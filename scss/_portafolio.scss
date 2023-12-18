@@ -11,10 +11,20 @@ main#portafolio {
         h1 {
             grid-column: 1 / 2;
             grid-row: 2;
+            margin-left: 2rem;
         }
 
         .izquierda {
             grid-column: 1 / 2;
+            @include caja($amarillo);
+            padding: 0 10%;
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+
+            h2 {
+                height: 1.2rem;  
+            }
         }
 
         .uno {
@@ -54,25 +64,22 @@ main#portafolio {
             }
             
             div:nth-child(1) {
-                background: url('../img/ilus-naorta.png')90% 0 no-repeat;
+                background: url('../img/dibujos/portafolio-1.png')90% 0 no-repeat;
                 position: relative;
                 opacity: 0;
-                transition: 0.5s;
             }
             div:nth-child(2) {
-                background: url('../img/ilus-naorta.png')90% 0 no-repeat;
+                background: url('../img/dibujos/portafolio-2.png')50% no-repeat;
                 position: relative;
                 opacity: 0;
                 top: -100%;
-                transition: 0.5s;
             }
             
             div:nth-child(3) {
-                background: url('../img/ilus-naorta.png')90% 0 no-repeat;
+                background: url('../img/dibujos/portafolio-3.png')50% no-repeat;
                 position: relative;
                 opacity: 0;
                 top: -200%;
-                transition: 0.5s;
             }
         }       
     }
